@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Props.html</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const Profile = (props) => {
+            return <div>
+                <div>Name: {props.name}</div>
+                <div>Email: {props.email}</div>
+                <div>Gender: {props.gender}</div>
+            </div>
+        },
+            MainCard = () => {
+                return <Profile name='Rafiya' email='rafiyamateen2@gmail.com' gender='female' />
+            }
+
+        ReactDOM.render(<MainCard />, document.getElementById('root'))
+    </script>
+</body>
+
+</html>
