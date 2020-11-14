@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Counter using react state</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const Counter = () => {
+            const [count, setCount] = React.useState(0);
+            const increment = () => {
+                setCount(count + 1);
+            }
+            const decrement = () => {
+                setCount(count - 1);
+            }
+            const plusTwo = () => {
+                setCount(count + 2);
+            }
+            const minusTwo = () => {
+                setCount(count - 2);
+            }
+            return <div>
+                <h2>Counts: {count}</h2>
+                <button onClick={minusTwo} >Decrement by 2</button>
+                <button onClick={decrement} >Decrement by 1</button>
+                <button onClick={increment} >Increment by 1</button>
+                <button onClick={plusTwo} >Increment by 2</button>
+            </div>
+        }
+        const App = () => {
+            return (
+                <div>
+                    <h1>Counter App</h1>
+                    <Counter />
+                </div>
+            )
+        }
+        ReactDOM.render(<App />, document.querySelector("#root"))
+    </script>
+</body>
+
+</html>
