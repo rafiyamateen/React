@@ -1,0 +1,10 @@
+button {
+    padding: 5px;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 4px;
+}
+#counter {
+    margin-top: 10%;
+}
